@@ -1,0 +1,187 @@
+
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet Final - Plateforme de Mentorat Universitaire</title>
+    <style>
+        @page { size: A4; margin: 20mm; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #2c3e50; background-color: #fff; margin: 0; padding: 0; }
+        .page-break { page-break-before: always; }
+        .cover-page { height: 100vh; display: flex; flex-direction: column; justify-content: space-between; text-align: center; padding: 40px 0; box-sizing: border-box; }
+        .institution { font-size: 1.3em; font-weight: bold; color: #1a365d; text-transform: uppercase; letter-spacing: 1px; }
+        .university { font-size: 1.1em; color: #4a5568; margin-bottom: 40px; }
+        .project-tag { font-size: 1.2em; color: #3182ce; text-transform: uppercase; font-weight: 600; letter-spacing: 2px; }
+        .main-title { font-size: 2.5em; color: #2b6cb0; margin: 20px 0 10px 0; font-weight: 700; line-height: 1.2; }
+        .subtitle { font-size: 1.1em; font-style: italic; color: #718096; max-width: 600px; margin: 0 auto 50px auto; }
+        .meta-box { border-left: 4px solid #2b6cb0; background-color: #ebf8ff; padding: 20px; text-align: left; margin: 40px auto; max-width: 650px; border-radius: 0 8px 8px 0; }
+        .meta-box ul { list-style-type: none; padding-left: 0; margin: 10px 0; }
+        .meta-box li { margin-bottom: 5px; }
+        .supervisor { margin-top: 15px; font-weight: bold; }
+        .footer-cover { font-size: 1em; font-weight: 500; color: #4a5568; margin-top: auto; }
+        h2 { color: #1a365d; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 35px; font-size: 1.6em; }
+        h3 { color: #2b6cb0; margin-top: 25px; font-size: 1.25em; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 20px; padding-left: 25px; }
+        li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { border: 1px solid #cbd5e0; padding: 12px 15px; text-align: left; vertical-align: top; }
+        th { background-color: #f7fafc; color: #2d3748; font-weight: 700; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+        code { background-color: #edf2f7; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; color: #805ad5; }
+        pre { background-color: #1a202c; color: #f7fafc; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: monospace; margin: 15px 0; }
+        .sommaire-list { list-style-type: none; padding-left: 0; }
+        .sommaire-list li { padding: 6px 0; border-bottom: 1px dashed #e2e8f0; }
+    </style>
+</head>
+<body>
+    <div class="cover-page">
+        <div>
+            <div class="institution">Institut de Formation et de Recherche en Informatique (IFRI)</div>
+            <div class="university">Université d'Abomey-Calavi (UAC)</div>
+        </div>
+        <div>
+            <div class="project-tag">Projet Intégrateur</div>
+            <h1 class="main-title">RAPPORT DE PROJET FINAL<br>DÉVELOPPEMENT DE LA PLATEFORME DE MENTORAT UNIVERSITAIRE</h1>
+            <div class="subtitle">Dossier technique complet : Fonctionnement interne, conception, déploiement et manuel utilisateur</div>
+        </div>
+        <div class="meta-box">
+            <div><strong>Nom du Groupe :</strong> [Ex: Groupe N°X / Équipe Mentorat]</div>
+            <div style="margin-top: 10px;"><strong>Membres du Groupe :</strong></div>
+            <ul>
+                <li>• [Nom & Prénom Membre 1 - Chef de Projet / Dév Backend]</li>
+                <li>• [Nom & Prénom Membre 2 - Développeur Frontend]</li>
+                <li>• [Nom & Prénom Membre 3 - Administrateur Base de Données]</li>
+                <li>• [Nom & Prénom Membre 4 - Concepteur / Rédacteur]</li>
+                <li>• [Nom & Prénom Membre 5 - Ingénieur DevOps / Déploiement]</li>
+                <li>• [Nom & Prénom Membre 6 - Responsable Qualité / Tests]</li>
+            </ul>
+            <div class="supervisor">Supervisé par : Mme Maryse GAHOU & l'équipe d'encadrement</div>
+        </div>
+        <div class="footer-cover">Livrable Académique Final 2025-2026<br><strong>Juin 2026</strong></div>
+    </div>
+    <div class="page-break">
+        <h2>SOMMAIRE</h2>
+        <ul class="sommaire-list">
+            <li><strong>1.</strong> Présentation du Groupe et Organisation Interne</li>
+            <li><strong>2.</strong> Spécifications Fonctionnelles Obligatoires</li>
+            <li><strong>3.</strong> Conception Technique (Structure et Base de Données)</li>
+            <li><strong>4.</strong> Spécifications du Backend & Choix Technologiques</li>
+            <li><strong>5.</strong> Instructions de Déploiement</li>
+            <li><strong>6.</strong> Manuel d'Utilisation de l'Application</li>
+        </ul>
+    </div>
+    <div class="page-break">
+        <h2>1. PRÉSENTATION DU GROUPE ET ORGANISATION INTERNE</h2>
+        [span_0](start_span)<p>Conformément aux exigences pédagogiques, notre équipe est constituée de 5 à 6 étudiants de l'IFRI issus de filières différentes[span_0](end_span). [span_1](start_span)Cette mixité permet de simuler un environnement professionnel et de croiser les compétences en génie logiciel et développement d'applications[span_1](end_span).</p>
+        <h3>1.1 Démarche de travail suivie</h3>
+        [span_2](start_span)<p>Pour mener à bien ce projet dans le délai strict de 10 jours, le groupe a adopté une méthodologie agile simplifiée[span_2](end_span). [span_3](start_span)Nous avons découpé les 10 jours en 3 phases majeures[span_3](end_span):</p>
+        <ol>
+            [span_4](start_span)<li><strong>Jours 1 à 3 (Conception & Architecture) :</strong> Analyse du cahier des charges, modélisation de la base de données relationnelle et création des maquettes HTML/CSS d'interface[span_4](end_span).</li>
+            [span_5](start_span)<li><strong>Jours 4 à 8 (Développement intensif) :</strong> Initialisation du projet sous Django, codage des vues métiers, implémentation du moteur de matching et synchronisation continue via Git[span_5](end_span).</li>
+            [span_6](start_span)<li><strong>Jours 9 à 10 (Tests & Déploiement) :</strong> Phase de test des cas d'utilisation (connexions, formulaires, messagerie), correction des bugs, rédaction de la documentation finale et déploiement[span_6](end_span).</li>
+        </ol>
+        <h3>1.2 Rôles et contributions de chacun des membres</h3>
+        [span_7](start_span)<p>Chaque membre a eu un rôle clairement défini pour équilibrer la charge de travail et garantir des validations (commits) régulières sur le dépôt GitHub partagé[span_7](end_span):</p>
+        <ul>
+            [span_8](start_span)<li><strong>Membre 1 (Chef de projet & Lead Dév Backend) :</strong> Coordination de l'équipe, configuration initiale de l'application Django, développement du moteur d'algorithme de matching[span_8](end_span).</li>
+            [span_9](start_span)<li><strong>Membre 2 (Développeur Frontend) :</strong> Intégration complète des interfaces utilisateurs en HTML5 / CSS3 et JavaScript Vanilla pour assurer une navigation moderne et intuitive sans framework externe[span_9](end_span).</li>
+            [span_10](start_span)<li><strong>Membre 3 (Administrateur Base de Données) :</strong> Établissement du schéma entité-association, configuration de l'instance MySQL, écriture et optimisation des requêtes d'insertion et de recherche[span_10](end_span).</li>
+            [span_11](start_span)<li><strong>Membre 4 (Développeur Backend Modules Annexes) :</strong> Programmation du système de messagerie textuelle asynchrone et de la logique de gestion des profils (mises à jour, compétences, lacunes)[span_11](end_span).</li>
+            [span_12](start_span)<li><strong>Membre 5 (Ingénieur DevOps & Qualité) :</strong> Gestion du dépôt Git, résolution des conflits de fusion, mise en place de la stratégie de déploiement et exécution des plans de tests d'intégration[span_12](end_span).</li>
+        </ul>
+    </div>
+    <div>
+        <h2>2. SPÉCIFICATIONS FONCTIONNELLES OBLIGATOIRES</h2>
+        [span_13](start_span)<p>L'application fournit une interface unifiée de mise en correspondance pour les étudiants de l'IFRI selon trois axes incontournables[span_13](end_span):</p>
+        <h3>2.1 Gestion des profils et sécurité</h3>
+        <ul>
+            [span_14](start_span)<li><strong>Inscription & Unicité :</strong> Formulaire requérant Nom, Prénom, Téléphone, E-mail et Mot de passe[span_14](end_span). [span_15](start_span)Le système rejette toute inscription si l'e-mail ou le numéro de téléphone est déjà présent dans la base MySQL[span_15](end_span).</li>
+            [span_16](start_span)<li><strong>Authentification :</strong> Connexion sécurisée avec e-mail/téléphone et mot de passe hashé[span_16](end_span). [span_17](start_span)Gestion des erreurs de connexion et processus de réinitialisation[span_17](end_span).</li>
+            [span_18](start_span)<li><strong>Profil utilisateur :</strong> Modifiable en tout temps[span_18](end_span). [span_19](start_span)Il inclut la photo (facultative), la filière, le niveau, les points forts (compétences maîtrisées), les points faibles (matières à améliorer) et les disponibilités[span_19](end_span).</li>
+        </ul>
+        <h3>2.2 Moteur de Matching et Messagerie</h3>
+        <ul>
+            [span_20](start_span)<li><strong>Offres et Demandes :</strong> Publication d'annonces de mentorat précisant la matière, la plage horaire et le format (présentiel, en ligne ou hybride)[span_20](end_span).</li>
+            [span_21](start_span)<li><strong>Algorithme de calcul :</strong> Le serveur calcule automatiquement un score d'affinité basé sur la concordance croisée "Points forts du mentor / Points faibles du mentoré", la superposition des horaires et la proximité de filière[span_21](end_span). [span_22](start_span)Les résultats s'affichent sous forme de liste claire triée par score de compatibilité[span_22](end_span).</li>
+            [span_23](start_span)<li><strong>Messagerie textuelle :</strong> Canal d'échange instantané entre les binômes validés, équipé de notifications en temps réel lors de l'envoi de messages et d'un historique complet persistant[span_23](end_span).</li>
+        </ul>
+    </div>
+    <div class="page-break">
+        <h2>3. CONCEPTION TECHNIQUE (STRUCTURE ET BASE DE DONNÉES)</h2>
+        <h3>3.1 Structure du projet et architecture</h3>
+        [span_24](start_span)<p>Le projet adopte une architecture client-serveur basée sur le patron de conception MVT (Modèle-Vue-Template) natif de Django, assurant une séparation hermétique entre la couche de données, la logique métier et l'affichage utilisateur[span_24](end_span).</p>
+        <h3>3.2 Modèle de Données (Schéma de la base de données)</h3>
+        <p>La base de données relationnelle s'articule autour des tables principales suivantes :</p>
+        <ul>
+            [span_25](start_span)<li><strong>Utilisateur (User) :</strong> Contient l'identifiant unique, le nom, le prénom, l'e-mail unique, le numéro de téléphone unique, le mot de passe hashé, la filière et le niveau d'études[span_25](end_span).</li>
+            [span_26](start_span)<li><strong>Matiere / Competence :</strong> Liste référentielle des matières enseignées à l'IFRI[span_26](end_span).</li>
+            [span_27](start_span)<li><strong>Profil_Matiere :</strong> Table d'association qualifiant le niveau de l'utilisateur sur une matière (Type : "Point Fort" ou "Point Faible")[span_27](end_span).</li>
+            [span_28](start_span)<li><strong>Annonce (Offre/Demande) :</strong> Stocke l'auteur, la matière concernée, le type d'annonce, les disponibilités associées et le format de l'échange[span_28](end_span).</li>
+            [span_29](start_span)<li><strong>Message :</strong> Enregistre l'expéditeur, le destinataire, le corps textuel du message et l'horodatage précis pour l'historique de la conversation[span_29](end_span).</li>
+        </ul>
+        <h2>4. SPÉCIFICATIONS DU BACKEND & CHOIX TECHNOLOGIQUES</h2>
+        [span_30](start_span)<p>Afin de coller scrupuleusement au contexte technique réel mis en œuvre par notre groupe, le tableau de bord des technologies se résume ainsi[span_30](end_span):</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Couche</th>
+                    <th>Technologies Retenues & Utilisées</th>
+                    <th>Technologies Écartées / Interdites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Frontend</strong></td>
+                    [span_31](start_span)<td>HTML5 / CSS3<br>JavaScript (Vanilla)[span_31](end_span)</td>
+                    [span_32](start_span)<td>Aucun framework ou outil de style lourd (ex : Bootstrap, Tailwind CSS, Vue.js écartés)[span_32](end_span).</td>
+                </tr>
+                <tr>
+                    <td><strong>Backend</strong></td>
+                    [span_33](start_span)<td>Python avec le framework de production <strong>Django</strong>[span_33](end_span)</td>
+                    [span_34](start_span)[span_35](start_span)<td>Flask (non retenu), PHP (Laravel/Symfony), Node.js, Ruby on Rails, Bun, Java[span_34](end_span)[span_35](end_span).</td>
+                </tr>
+                <tr>
+                    <td><strong>Base de Données</strong></td>
+                    [span_36](start_span)<td>MySQL (Système relationnel robuste accessible via SQL)[span_36](end_span)</td>
+                    [span_37](start_span)<td>SQLite (interdit pour la production), PostgreSQL (non configuré)[span_37](end_span).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-break">
+        <h2>5. INSTRUCTIONS DE DÉPLOIEMENT</h2>
+        [span_38](start_span)<p>Pour déployer et tester l'application localement ou sur un serveur de staging en vue de l'évaluation par l'équipe pédagogique (ratheilesse, primearwyn, MaryseGAHOU), suivez scrupuleusement les étapes suivantes[span_38](end_span):</p>
+        <h3>Étape 1 : Clonage du dépôt distant</h3>
+        <pre><code>git clone https://github.com/votre-compte/projet-mentorat-ifri.git
+cd projet-mentorat-ifri</code></pre>
+        <h3>Étape 2 : Configuration de l'environnement virtuel et dépendances</h3>
+        <pre><code>python -m venv venv
+source venv/bin/activate # Sur Windows: venv\Scripts\activate
+pip install -r requirements.txt</code></pre>
+        <h3>Étape 3 : Configuration de la Base de Données MySQL</h3>
+        <p>Créez une base de données nommée <code>mentorat_ifri</code> sur votre serveur MySQL local, puis configurez le fichier <code>settings.py</code> de Django avec vos identifiants SQL. [span_39](start_span)Appliquez ensuite les migrations pour monter les tables[span_39](end_span):</p>
+        <pre><code>python manage.py makemigrations
+python manage.py migrate</code></pre>
+        <h3>Étape 4 : Lancement du serveur d'application</h3>
+        <pre><code>python manage.py runserver</code></pre>
+        [span_40](start_span)<p>L'application sera alors accessible localement à l'adresse internet : <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>[span_40](end_span).</p>
+    </div>
+    <div class="page-break">
+        <h2>6. MANUEL D'UTILISATION DE L'APPLICATION</h2>
+        <h3>6.1 Parcours Utilisateur initial : Inscription et Configuration</h3>
+        <ol>
+            [span_41](start_span)<li><strong>Étape de bienvenue :</strong> Lancez l'application dans votre navigateur[span_41](end_span). [span_42](start_span)Sur la page d'accueil, cliquez sur le bouton "S'inscrire"[span_42](end_span).</li>
+            [span_43](start_span)<li><strong>Création du compte :</strong> Remplissez tous les champs obligatoires[span_43](end_span). [span_44](start_span)Prenez soin de saisir une adresse e-mail valide et un numéro de téléphone unique[span_44](end_span). [span_45](start_span)Cliquez sur valider[span_45](end_span).</li>
+            [span_46](start_span)<li><strong>Définition du Profil :</strong> Accédez à votre tableau de bord puis cliquez sur "Mon Profil"[span_46](end_span). [span_47](start_span)Renseignez votre filière (ex : Génie Logiciel) et votre niveau[span_47](end_span). [span_48](start_span)Ajoutez vos Points Forts (les matières que vous maîtrisez) et vos Points Faibles (les cours où vous éprouvez des difficultés)[span_48](end_span). [span_49](start_span)Enregistrez les modifications[span_49](end_span).</li>
+        </ol>
+        <h3>6.2 Utilisation du Matching et de la Messagerie</h3>
+        <ol>
+            [span_50](start_span)<li><strong>Publier une Annonce :</strong> Allez dans l'onglet "Annonces"[span_50](end_span). [span_51](start_span)Cliquez sur "Créer une annonce"[span_51](end_span). [span_52](start_span)Choisissez le type (Offre si vous voulez être mentor, Demande si vous cherchez de l'aide), sélectionnez le cours concerné, indiquez vos tranches horaires libres et choisissez le format d'échange (En ligne ou Présentiel)[span_52](end_span).</li>
+            [span_53](start_span)<li><strong>Trouver son Binôme (Matching) :</strong> Cliquez sur l'onglet "Trouver un Mentor / Mentoré"[span_53](end_span). [span_54](start_span)L'algorithme analyse instantanément votre profil et affiche automatiquement la liste des étudiants compatibles avec un pourcentage de correspondance[span_54](end_span).</li>
+            [span_55](start_span)<li><strong>Entrer en Contact :</strong> Cliquez sur le profil d'un étudiant suggéré pour ouvrir une session de chat[span_55](end_span). [span_56](start_span)Vous pouvez lui envoyer un message textuel instantané pour planifier votre première séance d'entraide[span_56](end_span). [span_57](start_span)Une notification visuelle apparaîtra dès qu'il vous répondra[span_57](end_span).</li>
+        </ol>
+    </div>
+</body>
+</html>
